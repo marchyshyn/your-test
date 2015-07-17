@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yourTest">
+<head>
+	<meta charset="UTF-8">
+	<title>QAP 2015</title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<script src="js/angular.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
+	<script src="js/swipe.js"></script>
+	<script src="js/scroll.js"></script>
+</head>
+<body ng-controller="testList">
+	<header>
+		<p>YOUR</p><p>TEST</p>
+	</header>
+	<div id="wrapper">
+		<div id="swipe_wrapper">
+			<div class="test_list">
+				<form action="#">
+					<div class="data_block data_block_style">
+						<div class="block_title" id="documents_title">
+							<img src="img/documents.png" alt="">
+							<p>Documents</p>
+						</div>
+						<div class="list_wrapper" id="documents_scroll">
+							<p ng-repeat="employee in documents">
+								<input type="checkbox" value="{{employee.name}}" ng-checked="check(employee.name) > -1" ng-click="toggleSelection(employee.name, 'documents', employee.description)" id="{{employee.id}}">
+								<label  for="{{employee.id}}">
+									<span class="checkImg checkImgDocuments"></span>
+									<span class="nameData">{{employee.name}}</span>
+									<span class="descriptionData">{{employee.description}}</span>
+								</label>
+							</p>
+						</div>
+						<input type="checkbox" id="checkAllDocuments" ng-model="selectedAllDocuments" ng-click="checkAllDocuments()" />
+						<label for="checkAllDocuments"><span id="chAllDocuments">ADD ALL</span></label>
+					</div>
+					<div class="data_block data_block_style">
+						<div class="block_title" id="links_title">
+							<img src="img/links.png" alt="">
+							<p>Links</p>
+						</div>
+						<div class="list_wrapper" id="links_scroll">
+							<p ng-repeat="employee in links">
+								<input type="checkbox" value="{{employee.name}}" ng-checked="check(employee.name) > -1" ng-click="toggleSelection(employee.name, 'links', employee.description)" id="{{employee.id}}">
+								<label  for="{{employee.id}}">
+									<span class="checkImg checkImgLinks"></span>
+									<span class="nameData">{{employee.name}}</span>
+									<a href="https://{{employee.href}}">{{employee.href}}</a>
+									<span class="descriptionData">{{employee.description}}</span>
+								</label>
+							</p>
+						</div>
+						<input type="checkbox" id="checkAllLinks" ng-model="selectedAllLinks" ng-click="checkAllLinks()" />
+						<label for="checkAllLinks"><span id="chAllLinks">ADD ALL</span></label>
+					</div>
+					<div class="data_block data_block_style">
+						<div class="block_title" id="science_lab_title">
+							<img src="img/science-lab.png" alt="">
+							<p>Science Lab</p>
+						</div>
+						<div class="list_wrapper" id="scienceLabs_scroll">
+							<p ng-repeat="employee in scienceLabs">
+								<input type="checkbox" value="{{employee.name}}" ng-checked="check(employee.name) > -1" ng-click="toggleSelection(employee.name, 'scienceLabs', employee.description)" id="{{employee.id}}">
+								<label  for="{{employee.id}}">
+									<span class="checkImg checkImgScienceLabs"></span>
+									<span class="nameData">{{employee.name}}</span>
+									<a href="https://{{employee.href}}">{{employee.href}}</a>
+									<span class="descriptionData">{{employee.description}}</span>
+								</label>
+							</p>
+						</div>
+						<input type="checkbox" id="checkAllScienceLabs" ng-model="selectedAllScienceLabs" ng-click="checkAllScienceLabs()" />
+						<label for="checkAllScienceLabs"><span id="chAllScienceLabs">ADD ALL</span></label>
+					</div>
+				</form>
+			</div>
+			<div class="test_list">
+				<form action="#">
+					<div id="send_data_block" class="data_block_style">
+						<div id="send_block_title">
+							<img src="img/send.png" alt="">
+						</div>
+						<div>
+							<div id="user_data">
+								<p>
+									<input type="text" id="userName" class="user_input_data" placeholder="User Name">
+									<label for="userName">Name</label>
+								</p>
+								<p>
+									<input type="text" id="userEmail" class="user_input_data" placeholder="useremail@mail.com">
+									<label for="userEmail">Email</label>
+								</p>
+								<p>
+									<input type="text" id="userMessage" class="user_input_data" placeholder="Message text...">
+								</p>
+							</div>
+							<span id="itemsLength">{{selection.length}} attached links</span>
+							<div ng-model="checkLength" id="send_list_wrapper">
+								<p ng-repeat="sec in selection | filter:checkLength" class="bottom_line">
+									<output>{{sec.employeeName}}, {{sec.employeeSnippet}} <img src="img/delete.png" alt="" ng-click="remove(sec.name)"></output>
+								</p>
+							</div>
+							<div id="sendUserInfo"></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

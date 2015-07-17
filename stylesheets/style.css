@@ -1,0 +1,321 @@
+@font-face {
+    font-family: RobotoBlack;
+    src: url(../fonts/roboto-black.ttf);
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../fonts/roboto-medium.ttf);
+}
+
+@font-face {
+    font-family: MorningStar;
+    src: url(../fonts/morning-star.ttf);
+}
+
+html, body {
+	width: 1024px;
+	height: 768px;
+	margin: 0;
+	overflow: hidden;
+}
+
+header {
+	width: 1024px;
+	height: 104px;
+	box-shadow: 0 2px 4px -2px rgb( 0, 0, 0 );
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 104px;
+}
+
+header p {
+	font-family: RobotoBlack;
+	color: #656565;
+	margin: 0;
+	font-size: 35px;
+	display: inline-block;
+	margin: 0;
+}
+
+header p:nth-child(2) {
+	font-family: MorningStar;
+	color: #00b9e6;
+	font-size: 30px;
+	line-height: 100px;
+	position: relative;
+	bottom: 7px;
+}
+
+#wrapper {
+	background: #f5f5f5;
+	text-align: center;
+}
+
+.data_block_style {
+	border-top: none;
+	border-left: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px -3px rgb( 0, 0, 0 );
+	overflow: hidden;
+}
+
+.data_block {
+	width: 300px;
+	height: 577px;
+	display: inline-block;
+	background: #fff;
+	margin: 24px 8px 60px 9px;
+}
+
+.data_block:nth-child(1) {
+	margin-left: 8px;
+}
+
+.data_block:nth-child(3) {
+	margin: 24px 1px 60px 12px;
+}
+
+.block_title {
+	width: 300px;
+	height: 141px;
+}
+
+.block_title img {
+	padding-top: 43px;
+}
+
+.block_title p {
+	text-align: left;
+	padding: 4px 0 0 23px;
+	color: #fff;
+	font-family: RobotoMedium;
+	font-size: 18px;
+}
+
+#documents_title {
+	background: #db4437;
+}
+
+#links_title {
+	background: #00b9e6;
+}
+
+#science_lab_title {
+	background: #0f9d58;
+}
+
+.list_wrapper {
+	overflow: auto;
+	height: 346px;
+	padding-top: 29px;
+	border-bottom: 1px solid #e0dede;
+}
+
+.list_wrapper > p {
+	width: 251px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+.list_wrapper > p > label {
+	font-family: RobotoMedium;
+	display: inline-block;
+	text-align: left;
+}
+
+.data_block_style > label {
+	font-family: RobotoMedium;
+	font-size: 14px;
+	display: block;
+	margin: 23px 0 0 198px;
+	cursor:pointer;
+}
+
+input[type="checkbox"] + label #chAllDocuments{
+	color: #db4437;
+}
+
+input[type="checkbox"] + label #chAllLinks{
+	color: #00b9e6;
+}
+
+input[type="checkbox"] + label #chAllScienceLabs{
+	color: #0f9d58;
+}
+
+.nameData {
+	color: #8b8b8b;
+	font-size: 13px;
+}
+
+.list_wrapper a {
+	font-size: 11px;
+	display: block;
+	padding-left: 37px;
+	color: #b2b2b2;
+}
+
+.descriptionData {
+	display: block;
+	padding-left: 37px;
+	color: #b2b2b2;
+	font-size: 11px;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label .checkImg{
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin: 8px 13px -4px 0;
+    vertical-align:middle;
+    cursor:pointer;
+    background:url(../img/unchecked.png) left top no-repeat;
+}
+
+input[type="checkbox"]:checked + label .checkImgDocuments{
+    background:url(../img/checked_doc.png) left top no-repeat;
+}
+
+input[type="checkbox"]:checked + label .checkImgLinks{
+    background:url(../img/checked_links.png) left top no-repeat;
+}
+
+input[type="checkbox"]:checked + label .checkImgScienceLabs{
+    background:url(../img/checked_scienceLabs.png) left top no-repeat;
+}
+
+#swipe_wrapper {
+	width: 2048px;
+	height: 666px;
+}
+
+#swipe_wrapper > .test_list {
+	width: 1024px;
+	height: 666px;
+	float: left;
+	display: inline-block;
+}
+
+#send_data_block {
+	width: 725px;
+	height: 577px;
+	margin: 0 auto;
+	margin-top: 24px;
+	background: #fff;
+}
+
+#send_block_title {
+	height: 141px;
+	background: #00b9e6;
+}
+
+#send_block_title > img {
+	margin-top: 47px;
+}
+
+.user_input_data {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 305px;
+	height: 30px;
+	margin-top: 10px;
+}
+
+#user_data {
+	width: 655px;
+	height: 102px;
+	margin: 0 auto;
+	text-align: left;
+	padding-top: 20px;
+}
+
+#user_data > p {
+	width: 305px;
+	display: inline-block;
+	margin: 7px 0 0 0;
+	vertical-align: middle;
+}
+
+#user_data > p:nth-child(2) {
+	float: right;
+}
+
+#user_data > p > label {
+	font-family: RobotoMedium;
+	color: #bdbdbd;
+	font-size: 12px;
+	text-align: left;
+	display: block;
+	position: relative;
+	bottom: 45px;
+}
+
+#user_data input {
+	font-family: RobotoMedium;
+	color: #4c4c4c;
+	font-size: 16px;
+}
+
+#user_data input:focus ~ label {
+	color: #00b9e6;
+}
+
+#user_data input:focus {
+	outline: none;
+	border-bottom: 2px solid #00b9e6;
+} 
+
+#userMessage {
+	width: 655px;
+}
+
+#userMessage::-webkit-input-placeholder {
+	color: #bdbdbd;
+}
+
+#send_list_wrapper {
+	width: 100%;
+	overflow: auto;
+	height: 202px;
+	margin: 0 auto;
+	text-align: left;
+	border-bottom: 1px solid #e0dede;
+}
+
+#itemsLength {
+	font-family: RobotoMedium;
+	color: #00b9e6;
+	font-size: 18px;
+	margin: 30px 0 0 35px;
+	float: left;
+}
+
+.bottom_line {
+	border-bottom: 1px solid #c6c6c6; 
+	height: 25px;
+	font-family: RobotoMedium;
+	color: #5f5f5f;
+	font-size: 14px;
+	width: 655px;
+	margin: 0 auto;
+	padding-top: 16px;
+}
+
+#send_list_wrapper output {
+	display: block;
+	width: 100%;
+}
+
+#send_list_wrapper img {
+	float: right;
+}
